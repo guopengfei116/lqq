@@ -1,4 +1,4 @@
-import { toArray } from "@qq/qq-util/object";
+import { toArray } from "lqq-util/lib/object";
 
 // { moduleName: routes{Array<Route>} }
 const routeStore = {};

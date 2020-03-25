@@ -1,4 +1,4 @@
-import { toArray } from "@qq/qq-util/object";
+import { toArray } from "lqq-util/lib/object";
 
 // { name: hook{name, pointcut, executors} }
 const hookStore = {};

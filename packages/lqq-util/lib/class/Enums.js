@@ -1,4 +1,4 @@
-import { entries2dict } from "qq/qq-core/object/recombination";
+import { entries2dict } from "lqq-util/lib/object";
 
 export default class Enums {
   constructor(enums = {}, tuple = []) {

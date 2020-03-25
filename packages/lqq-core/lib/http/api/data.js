@@ -3,7 +3,7 @@ import {
   keyCamelify,
   keySnakeify,
   keyKebabify
-} from "@qq/qq-util/object";
+} from "lqq-util/lib/object";
 
 const styleDict = {
   camel: keyCamelify,

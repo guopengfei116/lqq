@@ -8,7 +8,7 @@
   "author": "guopf <626138959@qq.com>",
   "homepage": "",
   "license": "MIT",
-  "main": "main.js",
+  "main": "lib/main.js",
   "directories": {
     "lib": "lib"
   },
@@ -18,5 +18,9 @@
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
-  "gitHead": "6349a7cc00c516c86393a4dd775d45e01dbfec0d"
+  "gitHead": "6349a7cc00c516c86393a4dd775d45e01dbfec0d",
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0"
+  }
 }

@@ -8,7 +8,7 @@
   "author": "guopf <626138959@qq.com>",
   "homepage": "",
   "license": "MIT",
-  "main": "main.js",
+  "main": "lib/main.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -20,7 +20,13 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "lqq-util": "^0.0.4"
+    "axios": "^0.19.2",
+    "lodash": "^4.17.15",
+    "lqq-util": "^0.0.4",
+    "nprogress": "^0.2.0",
+    "vue": "^2.6.11",
+    "vue-router": "^3.1.6",
+    "vuex": "^3.1.3"
   },
   "gitHead": "6349a7cc00c516c86393a4dd775d45e01dbfec0d"
 }

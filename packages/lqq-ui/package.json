@@ -1,0 +1,27 @@
+{
+  "name": "lqq-ui",
+  "version": "0.0.4",
+  "description": "> TODO: description",
+  "author": "guopf <626138959@qq.com>",
+  "homepage": "https://github.com/guopengfei116/qq#readme",
+  "license": "MIT",
+  "main": "main.js",
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guopengfei116/qq.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/guopengfei116/qq/issues"
+  },
+  "dependencies": {
+    "element-ui": "^2.13.0",
+    "lqq-util": "^0.0.4",
+    "vue": "^2.6.11"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "@qq/qq-core",
+  "version": "0.0.0",
+  "description": "qq core",
+  "keywords": [
+    "qq"
+  ],
+  "author": "guopf <626138959@qq.com>",
+  "homepage": "",
+  "license": "MIT",
+  "main": "main.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@qq/qq-util": "^0.0.0"
+  }
+}

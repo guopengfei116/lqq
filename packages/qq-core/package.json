@@ -1,6 +1,6 @@
 {
   "name": "@qq/qq-core",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "qq core",
   "keywords": [
     "qq"
@@ -23,6 +23,6 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@qq/qq-util": "^0.0.0"
+    "@qq/qq-util": "^0.0.1"
   }
 }

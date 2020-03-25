@@ -1,5 +1,5 @@
 {
-  "name": "@qq/qq-util",
+  "name": "qq-util",
   "version": "0.0.3",
   "description": "qq util",
   "keywords": [
@@ -17,5 +17,6 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
-  }
+  },
+  "gitHead": "6349a7cc00c516c86393a4dd775d45e01dbfec0d"
 }

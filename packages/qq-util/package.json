@@ -10,17 +10,12 @@
   "license": "MIT",
   "main": "main.js",
   "directories": {
-    "lib": "lib",
-    "test": "__tests__"
+    "lib": "lib"
   },
-  "files": [
-    "lib"
-  ],
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
-  },
-  "gitHead": "2dc1b14e80347ad837f8f11d2141658341350aa4"
+  }
 }

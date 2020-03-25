@@ -1,6 +1,6 @@
 {
   "name": "lqq-core",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "qq core",
   "keywords": [
     "qq"
@@ -20,7 +20,7 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "lqq-util": "^0.0.3"
+    "lqq-util": "^0.0.4"
   },
   "gitHead": "6349a7cc00c516c86393a4dd775d45e01dbfec0d"
 }

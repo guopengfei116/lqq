@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "description": "vue modularization programming",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guopengfei116/qq.git"
+  },
   "keywords": [
     "qq"
   ],

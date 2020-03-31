@@ -1,5 +1,5 @@
 import { clone } from "lodash";
-import { registerHttpEngine, getEngine } from "./engine-manager";
+import { registerHttpEngine, invadeHttpEngine, getEngine } from "./engine-manager";
 import { registerModule, getApi } from "./api-manager";
 import {
   beautifyData,
@@ -13,8 +13,13 @@ import {
  * @return Function api executor
  * */
 function executorFactory(namespace) {
-  const api = getApi(namespace);
-  const [method, url, other = {}] = api;
+  let apiConfig = namespace;
+
+  if (typeof namespace === "string") {
+    apiConfig = getApi(namespace);
+  }
+
+  const [method, url, other = {}] = apiConfig;
   const { engine, priority, request, response } = other;
 
   // executor
@@ -57,6 +62,7 @@ const createNamespacedHelpers = prePath => sufPath => {
 export {
   registerModule,
   registerHttpEngine,
+  invadeHttpEngine,
   getEngine as getHttpEngine,
   createNamespacedHelpers
 };

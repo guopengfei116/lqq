@@ -81,7 +81,9 @@ export default {
 
   .el-button {
     border: none;
+    font-size: @font-size;
     color: @color--white;
+
     &:focus,
     &:hover {
       color: @color--white;
@@ -101,6 +103,7 @@ export default {
       }
     }
   }
+
   &.secondary {
     .el-button {
       background-color: @btn--secondary;
@@ -112,6 +115,7 @@ export default {
       }
     }
   }
+
   &.danger {
     .el-button {
       background-color: @btn--danger;
@@ -123,6 +127,7 @@ export default {
       }
     }
   }
+
   &.warn {
     .el-button {
       background-color: @btn--warn;
@@ -134,6 +139,7 @@ export default {
       }
     }
   }
+
   &.plain {
     .el-button {
       background-color: @btn--plain;
@@ -154,19 +160,24 @@ export default {
       min-width: @btn-width;
     }
   }
+
   &.mini {
     .el-button {
       min-width: @btn-width--mini;
     }
   }
+
   &.small {
     .el-button {
       min-width: @btn-width--small;
     }
   }
+
   &.text {
     .el-button {
       min-width: auto;
+      font-weight: 400;
+      color: @color--link;
     }
   }
 }

@@ -1,0 +1,43 @@
+@import "./var.less";
+
+// 表格
+.el-table {
+  color: @color--primary !important;
+  font-size: @font-size !important;
+
+  & thead {
+    color: @color--info !important;
+    th, tr {
+      background-color: @tb-head-bg !important;
+    }
+  }
+
+  & table {
+    border-color: @border--gray !important;
+  }
+
+  & td, & th {
+    height: 40px;
+    padding: 0 !important;
+  }
+
+  & td, & .el-table th.is-leaf {
+    border-bottom: 1px solid @border--gray !important;
+  }
+
+  & &--enable-row-hover tr.el-table__row:hover td {
+    background-color: @nav-hover !important;
+  }
+}
+
+.el-date-table {
+  td.today span,
+  td.available:hover {
+    color: @color--link !important;
+  }
+
+  td.end-date span,
+  td.start-date span {
+    background-color: @color--link !important;
+  }
+}

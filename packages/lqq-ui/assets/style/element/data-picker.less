@@ -1,0 +1,31 @@
+@import "./var.less";
+
+// 日期选择器
+.el-date-editor {
+  & .el-range-input {
+    color: @color--primary;
+    font-size: @font-size;
+  }
+
+  & .el-range-separator {
+    font-size: @font-size;
+  }
+}
+
+// 有下拉框的日期选择器
+.select-data-picker {
+  .el-select {
+    width: 110px;
+
+    .el-input__inner {
+      border-right: 0;
+      border-top-right-radius: inherit;
+      border-bottom-right-radius: inherit;
+    }
+  }
+
+  .el-date-editor--daterange {
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+  }
+}

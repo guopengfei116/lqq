@@ -1,0 +1,21 @@
+@import "./var.less";
+
+// 消息弹窗
+.el-message-box__btns {
+  & .el-button--primary {
+    background-color: @btn--primary;
+    border-color: @btn--primary;
+    min-width: @btn-width--small;
+  }
+
+  & .el-button--default {
+    min-width: @btn-width--small;
+    border: @border--plain;
+  }
+}
+
+.el-message-box__input {
+  input.invalid, input.invalid:focus {
+    border-color: @color--danger !important;
+  }
+}

@@ -7,22 +7,26 @@
           :class="['trigger', isUnfold ? 'el-icon-s-unfold' : 'el-icon-s-fold']"
           @click="onSwitch(!isUnfold)"
         ></i>
+        <slot name="left"></slot>
       </el-col>
 
       <!-- center -->
       <el-col>
-        <h1 class="app-name">{{ app }}</h1>
+        <slot name="center">
+          <h1 class="app-name">{{ app }}</h1>
+        </slot>
       </el-col>
 
       <!-- right -->
       <el-col class="profile">
-        <slot></slot>
-        <el-tooltip placement="bottom" :content="user.tooltip">
-          <span class="profile_item">
-            <i class="el-icon-user-solid profile_item_icon"></i>
-            <span class="profile_item_text">{{ user.name }}</span>
-          </span>
-        </el-tooltip>
+        <slot name="right">
+          <el-tooltip placement="bottom" :content="user.tooltip">
+            <span class="profile_item">
+              <i class="el-icon-user-solid profile_item_icon"></i>
+              <span class="profile_item_text">{{ user.name }}</span>
+            </span>
+          </el-tooltip>
+        </slot>
       </el-col>
     </el-row>
   </el-header>

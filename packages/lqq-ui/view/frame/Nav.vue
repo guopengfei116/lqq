@@ -2,9 +2,11 @@
   <el-aside class="aside">
     <!-- logo -->
     <div class="header">
-      <strong :class="['logo', collapse ? 'logo--collapse' : '']">{{
-        logo
-      }}</strong>
+      <slot>
+        <strong :class="['logo', collapse ? 'logo--collapse' : '']">{{
+          logo
+        }}</strong>
+      </slot>
     </div>
 
     <!-- nav -->

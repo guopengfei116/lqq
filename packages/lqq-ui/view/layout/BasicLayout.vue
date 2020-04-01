@@ -1,13 +1,21 @@
 <template>
   <el-container class="app">
-    <qq-nav :logo="logo" :menus="menus" :collapse="isUnfold" />
+    <qq-nav :logo="logo" :menus="menus" :collapse="isUnfold">
+      <slot name="logo"></slot>
+    </qq-nav>
+
     <el-container class="app_container">
       <qq-header
         :is-unfold="isUnfold"
         :on-switch="onSwitch"
         :user="user"
         v-bind="header"
-      />
+      >
+        <slot name="headerl"></slot>
+        <slot name="headerc"></slot>
+        <slot name="headerr"></slot>
+      </qq-header>
+
       <el-main class="app_container_main">
         <router-view></router-view>
       </el-main>

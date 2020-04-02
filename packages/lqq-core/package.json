@@ -1,24 +1,16 @@
 {
   "name": "lqq-core",
   "version": "0.0.9",
-  "description": "qq core",
-  "keywords": [
-    "qq"
-  ],
+  "description": "lqq core",
   "author": "guopf <626138959@qq.com>",
-  "homepage": "",
   "license": "MIT",
   "main": "lib/main.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
+  "keywords": [
+    "lqq"
+  ],
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
-  },
-  "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
     "axios": "^0.19.2",

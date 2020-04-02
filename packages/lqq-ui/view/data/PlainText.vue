@@ -125,11 +125,15 @@ export default {
                 </div>
 
                 <div class="item_value">
+                  {$scopedSlots.before && $scopedSlots.before(item)}
+
                   {$scopedSlots.default ? (
                     $scopedSlots.default(item)
                   ) : (
                     <span>{item.value}</span>
                   )}
+
+                  {$scopedSlots.after && $scopedSlots.after(item)}
                 </div>
               </div>
             </el-col>

@@ -1,17 +1,18 @@
 {
-  "name": "qq",
+  "name": "lqq",
   "version": "1.0.0",
   "private": true,
   "description": "vue modularization programming",
+  "author": "guopf <626138959@qq.com>",
+  "license": "MIT",
+  "keywords": [
+    "lqq"
+  ],
+  "homepage": "https://github.com/guopengfei116/lqq#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/guopengfei116/qq.git"
+    "url": "git+https://github.com/guopengfei116/lqq.git"
   },
-  "keywords": [
-    "qq"
-  ],
-  "author": "guopf",
-  "license": "MIT",
   "devDependencies": {
     "lerna": "^3.20.2"
   }

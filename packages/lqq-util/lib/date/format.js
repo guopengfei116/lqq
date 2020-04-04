@@ -1,7 +1,7 @@
 import moment from "moment";
 
 const dateStyle = "YYYY-MM-DD";
-const timeStyle = "hh:mm:ss";
+const timeStyle = "HH:mm:ss";
 const dateTimeStyle = `${dateStyle} ${timeStyle}`;
 
 export const formatDate = (time, style = dateStyle) =>

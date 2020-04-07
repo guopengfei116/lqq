@@ -3,7 +3,7 @@ import createRouterSingle from "./router";
 
 import { registerModule as registerStore } from "./store";
 import { registerModule as registerRouter, registerRouterHook } from "./router";
-import { registerModule as registerApi, registerHttpEngine } from "./http";
+import { registerModule as registerApi, registerHttpEngine, invadeHttpEngine } from "./http";
 
 function bootstrap(modules) {
   modules.forEach(module => {
@@ -12,7 +12,8 @@ function bootstrap(modules) {
       registerRouter,
       registerRouterHook,
       registerApi,
-      registerHttpEngine
+      registerHttpEngine,
+      invadeHttpEngine
     });
   });
 }

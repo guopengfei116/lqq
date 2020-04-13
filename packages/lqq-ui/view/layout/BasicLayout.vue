@@ -11,9 +11,9 @@
         :user="user"
         v-bind="header"
       >
-        <slot name="headerl"></slot>
-        <slot name="headerc"></slot>
-        <slot name="headerr"></slot>
+        <slot v-slot:left name="headerl"></slot>
+        <slot v-slot:center name="headerc"></slot>
+        <slot v-slot:right name="headerr"></slot>
       </qq-header>
 
       <el-main class="app_container_main">

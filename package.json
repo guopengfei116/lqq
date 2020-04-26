@@ -6,7 +6,11 @@
   "author": "guopf <626138959@qq.com>",
   "license": "MIT",
   "keywords": [
-    "lqq"
+    "lqq",
+    "scaffold",
+    "vue",
+    "cli",
+    "ui"
   ],
   "homepage": "https://github.com/guopengfei116/lqq#readme",
   "repository": {
@@ -14,6 +18,16 @@
     "url": "git+https://github.com/guopengfei116/lqq.git"
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "lint-staged": "^10.0.8",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.1.2",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.1.0",
     "lerna": "^3.20.2"
+  },
+  "gitHooks": {
+    "commit-msg": "commitlint -E GIT_PARAMS"
   }
 }

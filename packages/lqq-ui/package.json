@@ -4,9 +4,10 @@
   "description": "lqq ui",
   "author": "guopf <626138959@qq.com>",
   "license": "MIT",
-  "main": "main.js",
+  "main": "lib/main.js",
   "keywords": [
-    "lqq"
+    "lqq",
+    "ui"
   ],
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",

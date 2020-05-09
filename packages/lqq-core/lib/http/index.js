@@ -22,19 +22,32 @@ function executorFactory(namespace) {
   const [method, url, other = {}] = apiConfig;
   const { engine, priority, request, response } = other;
 
-  // executor
+  /**
+   * executor
+   * 在数据非FormData时，会进行如下的数据处理：
+   * 1. 自动从数据中提取path参数放置到url中，比如/:id这种动态路径
+   * 2. 然后重置数据属性命名风格，比如驼峰转蛇形
+   * 3. 根据method和queries配置，自动判断用body还是query形式发送数据，也可能两者同时使用
+   */
   return (data, config) => {
-    data = clone(data);
-    let { queries = [] } = other;
-    const urlI = setParams(url, data);
+    if (typeof(FormData) === "undefined" || !data instanceof FormData) {
+      data = clone(data);
 
-    // data pre-processing
-    data = beautifyData(data, request && request.style);
-    queries = beautifyData(queries, request && request.style);
-    const queryI = extractQuery(queries, data);
-    const configI = getPayloadConfig(method, data, queryI);
+      // dynamic path
+      const urlI = setParams(url, data);
+
+      // data style
+      data = beautifyData(data, request && request.style);
+
+      // data payload
+      let { queries = [] } = other;
+      queries = beautifyData(queries, request && request.style);
+      const queryI = extractQuery(queries, data);
+      const configI = getPayloadConfig(method, data, queryI);
+    }
+
+    // send
     const engineI = getEngine(engine);
-
     const result = engineI({
       method,
       url: urlI,

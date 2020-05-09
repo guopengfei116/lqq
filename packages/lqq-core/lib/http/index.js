@@ -24,27 +24,27 @@ function executorFactory(namespace) {
 
   /**
    * executor
-   * 在数据非FormData时，会进行如下的数据处理：
+   * 用户数据会进行如下处理：
    * 1. 自动从数据中提取path参数放置到url中，比如/:id这种动态路径
    * 2. 然后重置数据属性命名风格，比如驼峰转蛇形
    * 3. 根据method和queries配置，自动判断用body还是query形式发送数据，也可能两者同时使用
+   * 注：如果数据为FormData，则不会命名风格转换
    */
   return (data, config) => {
+    // dynamic path
+    const urlI = setParams(url, data);
+
+    // data style
     if (typeof(FormData) === "undefined" || !(data instanceof FormData)) {
       data = clone(data);
-
-      // dynamic path
-      const urlI = setParams(url, data);
-
-      // data style
       data = beautifyData(data, request && request.style);
-
-      // data payload
-      let { queries = [] } = other;
-      queries = beautifyData(queries, request && request.style);
-      const queryI = extractQuery(queries, data);
-      const configI = getPayloadConfig(method, data, queryI);
     }
+
+    // data payload
+    let { queries = [] } = other;
+    queries = beautifyData(queries, request && request.style);
+    const queryI = extractQuery(queries, data);
+    const configI = getPayloadConfig(method, data, queryI);
 
     // send
     const engineI = getEngine(engine);

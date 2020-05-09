@@ -30,7 +30,7 @@ function executorFactory(namespace) {
    * 3. 根据method和queries配置，自动判断用body还是query形式发送数据，也可能两者同时使用
    */
   return (data, config) => {
-    if (typeof(FormData) === "undefined" || !data instanceof FormData) {
+    if (typeof(FormData) === "undefined" || !(data instanceof FormData)) {
       data = clone(data);
 
       // dynamic path

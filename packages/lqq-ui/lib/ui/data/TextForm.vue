@@ -1,4 +1,6 @@
 <script>
+import TextPlain from "./TextPlain";
+
 export default {
   name: "TextForm",
 
@@ -7,7 +9,7 @@ export default {
   render(h, context) {
     return (
       <section>
-        <mo-text-plain {...context.data}></mo-text-plain>
+        <TextPlain {...context.data}></TextPlain>
       </section>
     );
   }

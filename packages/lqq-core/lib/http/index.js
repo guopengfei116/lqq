@@ -7,6 +7,7 @@ import {
   extractQuery,
   getPayloadConfig
 } from "./api/data";
+import * as decorator from "./decorator";
 
 /**
  * 创建api执行器
@@ -77,7 +78,8 @@ export {
   registerHttpEngine,
   invadeHttpEngine,
   getEngine as getHttpEngine,
-  createNamespacedHelpers
+  createNamespacedHelpers,
+  decorator
 };
 
 export default executorFactory;

@@ -16,6 +16,7 @@
   "dependencies": {
     "element-ui": "^2.13.0",
     "lqq-util": "^0.0.18",
+    "lqq-core": "^0.0.18",
     "normalize.css": "^8.0.1",
     "vue": "^2.6.11"
   }

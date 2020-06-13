@@ -5,16 +5,16 @@
     :index="menu.id.toString()"
     @click="onMenuClick(menu)"
   >
-    <span>
-      <i class="el-icon-document" />
+    <p style="margin: 0">
+      <i :class="menu.icon || 'el-icon-document'"></i>
       <span>{{ menu.text }}</span>
-    </span>
+    </p>
   </el-menu-item>
 
   <!-- recursion -->
   <el-submenu v-else :index="String(menu.id)">
     <template slot="title" class="icon-s-platform">
-      <i class="el-icon-menu" />
+      <i :class="menu.icon || 'el-icon-menu'"></i>
       <span>{{ menu.text }}</span>
     </template>
     <qq-nav-item

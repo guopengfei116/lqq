@@ -4,8 +4,10 @@ import { debounce } from "lodash";
 
 /**
  * @Component 按钮组件
- * @Props { String }  type 按钮类型 主要primary、次要secondary、危险danger、其他warn、朴素plain、文本text
- * @Props { String }  size 按钮规格 默认default、中(主要)mini、小small
+ * @Props { String }  type 按钮类型 默认primary： 主要primary、次要secondary、危险danger、其他warn、朴素plain、文本text
+ * @Props { String }  size 按钮规格 默认small：中型medium、小型small、 迷你mini
+ * @Props { Boolean } disabled 是否禁用按钮
+ * @Props { Boolean } loading 是否显示Loading
  */
 export default {
   name: "Button",
@@ -24,6 +26,16 @@ export default {
       type: String,
       default: "small"
     },
+
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+
+    loading: {
+      type: Boolean,
+      default: false
+    }
   },
 
   created() {
@@ -41,13 +53,15 @@ export default {
   },
 
   render(h) {
-    const { type, size } = this;
+    const { type, size, loading, disabled } = this;
 
     return (
-      <div class={`button ${type} ${size}`}>
+      <div class={`button ${disabled ? 'disabled' : ''} ${type} ${size}`}>
         <el-button
           type={type === "text" ? "text" : ""}
           size={size}
+          loading={loading}
+          disabled={disabled}
           onClick={this.onClick}
           {...this.$attrs}
         >
@@ -60,7 +74,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@import "~lqq-ui/assets/style/var.less";
+@import "../../assets/style/var.less";
 
 .button {
   display: inline-block;
@@ -78,7 +92,6 @@ export default {
     }
   }
 
-  // 颜色样式
   &.primary {
     .el-button {
       background-color: @btn--primary;
@@ -165,6 +178,20 @@ export default {
       min-width: auto;
       font-weight: 400;
       color: @color--link;
+    }
+  }
+
+  // 禁用
+  &.disabled {
+    .is-disabled, .is-disabled:focus, .is-disabled:hover {
+      color: @color--disabled;
+      border-color: #EBEEF5;
+      border: 1px solid #ababab;
+      background-color: #FFF;
+    }
+    .is-disabled.el-button--text {
+      border: none;
+      background-color: transparent;
     }
   }
 }

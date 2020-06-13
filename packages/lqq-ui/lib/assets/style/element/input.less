@@ -3,25 +3,26 @@
 .el-input {
   & &-group__prepend, & &-group__append {
     width: 80px;
-    background-color: rgba(0, 0, 0, 0) !important;
-    border-color: @border--gray !important;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: @border--gray;
 
     .el-input__inner {
       border: none;
-      color: @color--primary !important
+      color: @color--primary;
     }
   }
 
   & &__inner {
-    font-size: @font-size !important;
+    font-size: @font-size;
     color: @color--primary;
-    border-color: @border--gray !important;
-    background: rgba(0, 0, 0, 0);
+    border-color: @border--gray;
+    background-color: rgba(0, 0, 0, 0);
   }
 
   & &.is-disabled {
     .el-input__inner {
       color: @color--disabled;
+      background-color: rgba(0, 0, 0, 0);
     }
   }
 }
